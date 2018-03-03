@@ -5,8 +5,7 @@ class  imooc{
     public static $classMap = [];
 
     public static function run(){
-        echo "run";
-        $route = new \core\route();
+        $route = new \core\lib\route();
     }
 
 
