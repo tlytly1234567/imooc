@@ -7,7 +7,6 @@ class route{
 
    public function __construct()
    {
-
        if(isset($_SERVER["REQUEST_URI"])&&$_SERVER["REQUEST_URI"]!="/")
       {
           $r_url =$_SERVER["REQUEST_URI"];
@@ -24,14 +23,10 @@ class route{
           }
 
       }else{
-           $this->ctrl = "index";
-           $this->action = "index";
-
+           $def_route  =  \core\lib\conf::get("def_route","route");
+           $this->ctrl = $def_route["ctrl"];
+           $this->action =  $def_route["action"];
        }
-
-       var_dump($this->ctrl);
-       var_dump($this->action);
-
    }
 
 

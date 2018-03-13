@@ -7,7 +7,7 @@
 
 define("imooc",dirname(__FILE__));
 define("core",imooc.'/core');
-define("app",imooc.('/app'));
+define("app",imooc.('\app'));
 
 
 define('DEBUG',true);
